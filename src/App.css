@@ -1,1 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.App{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.board{
+    width: calc(4rem * 8);
+    height: calc(4rem * 8);
+    display: flex;
+    flex-wrap: wrap;
+}
+.cell{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.black{
+    background-color: rgba(0, 0, 0, 0.814);
+}
+.white{
+    background-color: rgba(255, 166, 0, 0.547);
+}
