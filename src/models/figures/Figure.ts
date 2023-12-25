@@ -21,8 +21,9 @@ export class Figure{
 
  constructor(color:Colors, cell:Cell){
     this.color = color;
-    this.logo = null;
     this.cell = cell;
+    this.cell.figure = this;
+    this.logo = null;   
     this.name = FigureNames.FIGURE;
     this.id = Math.random();
  }
