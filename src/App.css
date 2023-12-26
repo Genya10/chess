@@ -37,3 +37,7 @@
 .white{
     background-color: rgba(255, 166, 0, 0.547);
 }
+
+.selected {
+    background-color: brown;
+}
