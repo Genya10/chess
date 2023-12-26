@@ -20,4 +20,12 @@ constructor(board:Board,x:number,y:number,color:Colors,figure:Figure|null){
     this.available = false;
     this.id = Math.random();
 }
+
+moveFigure(target:Cell){
+  if(this.figure && this.figure?.canMove(target)){
+    this.figure.moveFigure(target)
+    target.figure = this.figure;
+    this.figure = null;
+  }
+}
 }

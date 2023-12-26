@@ -31,5 +31,5 @@ export class Figure{
  canMove(target: Cell): boolean{
     return true;
  }
-moveFigure(target: Cell){}
+ moveFigure(target: Cell){}
 }
