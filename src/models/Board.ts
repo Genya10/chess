@@ -90,6 +90,5 @@ export class Board{
       this.addPawns()
       this.addRooks()
       this.addQueens()
-      console.log('New-new')
     }
 }

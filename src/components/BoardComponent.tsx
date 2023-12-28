@@ -12,8 +12,7 @@ interface BoardProps{
 }
 
 export const BoardComponent:FC<BoardProps> =({board,setBoard,currentPlayer,swapPlayer})=>{
-
-   
+  
     const[selectedCell,setSelectedCell] = useState<Cell | null>(null)
 
     function click(cell: Cell){
@@ -44,7 +43,7 @@ export const BoardComponent:FC<BoardProps> =({board,setBoard,currentPlayer,swapP
 
     return(
         <div>
-        <h3 style={{marginTop:'1rem',marginBottom:'0.5rem'}}>Текущий игрок:{currentPlayer?.color}</h3>
+        <h2 className="board-title">Текущий игрок : {currentPlayer?.color}</h2>
         <div className="board">
          {board.cells.map((row,index)=>
           <React.Fragment key={index}>

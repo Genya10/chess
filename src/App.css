@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;   
 }
 
 .App{
@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    padding-top: 2rem;
 }
 
 .board{
@@ -17,6 +18,10 @@
     height: calc(4rem * 8);
     display: flex;
     flex-wrap: wrap;
+}
+.board-title{
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
 }
 .cell{
     width: 4rem;
@@ -32,7 +37,7 @@
     position: relative;
 }
 .black{
-    background-color: rgba(0, 0, 0, 0.814);
+    background-color: rgba(0, 0, 0, 0.716);
 }
 .white{
     background-color: rgba(255, 166, 0, 0.547);
@@ -49,8 +54,32 @@
 }
 
 .lost-figures{
-    height: calc(50vh-3.75rem);
+    height: 50vh;
     padding: 2rem;
     margin-left: 3rem;
-    background-color: lightgray;
+    background-color: gray;
+}
+.lost-figures:first-child{
+    margin-top: 2rem;
+}
+
+.name-figure-lost{
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+}
+
+.timer{
+    margin-top: 5rem;
+    margin-right: 3rem;
+    text-align: center;
+}
+.btn-timer{
+    background-color: rgba(0, 0, 255, 0.76);
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.25rem 0.4rem;
+    border-radius: 0.7rem;
+    border: none;
+    cursor: pointer;
 }

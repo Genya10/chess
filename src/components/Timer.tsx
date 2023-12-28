@@ -36,15 +36,18 @@ export const Timer:FC<TimerProps> =({currentPlayer,restart})=>{
     setBlackTime(300);
     setWhiteTime(300);
     restart();
+    
    }
 
     return(
-        <div>
+        <div className="timer">
           <div>
-            <button onClick={handleRestart}>Restart game</button>
+            <button 
+                className="btn-timer"
+                onClick={handleRestart}>Restart game</button>
           </div>
-          <h2>Черные - {blackTime}</h2>
-          <h2>Белые - {whiteTime}</h2>
+          <h2>Черные - {blackTime} сек</h2>
+          <h2>Белые - {whiteTime} сек</h2>
         </div>
     )
 }

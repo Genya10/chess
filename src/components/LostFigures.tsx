@@ -11,9 +11,10 @@ export const LostFigures:FC<LostFiguresProps> = ({title,figures})=>{
         <div className="lost-figures">
           <h3>{title}</h3>
           {figures.map(figure =>
-          <div key={figure.id}>
+          <div className="name-figure-lost"
+             key={figure.id}>
             {figure.name}
-            {figure.logo && <img width={25} height={25} src={figure.logo}/>}
+            {figure.logo && <img width={28} height={28} src={figure.logo}/>}
           </div>)
           }
         </div>

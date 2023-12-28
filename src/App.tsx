@@ -35,19 +35,19 @@ function App() {
           currentPlayer={currentPlayer}
           restart={restart} />
       <BoardComponent 
-                board={board}
-                setBoard={setBoard}
-                currentPlayer ={currentPlayer}
-                swapPlayer={swapPlayer}/>
-                <div>
-                  <LostFigures
-                      title="Черные фигуры"
-                      figures={board.lostBlackFigures}/>
-                  <LostFigures
-                      title="Белые фигуры"
-                      figures={board.lostWhiteFigures}/>
-                </div>
-    </div>
+            board={board}
+            setBoard={setBoard}
+            currentPlayer ={currentPlayer}
+            swapPlayer={swapPlayer}/>
+            <div>
+              <LostFigures
+                  title="Черные фигуры"
+                  figures={board.lostBlackFigures}/>
+              <LostFigures
+                  title="Белые фигуры"
+                  figures={board.lostWhiteFigures}/>
+            </div>
+</div>
   );
 }
 
