@@ -21,8 +21,15 @@ constructor(board:Board,x:number,y:number,color:Colors,figure:Figure|null){
     this.id = Math.random();
 }
 
-isEmpty(){
+isEmpty():boolean{
   return this.figure === null;
+}
+
+isEnemy(target:Cell):boolean{
+  if(target.figure){
+    return this.figure?.color !== target.figure.color
+  }
+  return false;
 }
 
 isEmptyVertical(target:Cell):boolean{
