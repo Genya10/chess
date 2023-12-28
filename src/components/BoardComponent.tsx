@@ -44,7 +44,7 @@ export const BoardComponent:FC<BoardProps> =({board,setBoard,currentPlayer,swapP
 
     return(
         <div>
-        <h3 style={{marginTop:'1rem',marginBottom:'0.5rem'}}>Текущий игрок{currentPlayer?.color}</h3>
+        <h3 style={{marginTop:'1rem',marginBottom:'0.5rem'}}>Текущий игрок:{currentPlayer?.color}</h3>
         <div className="board">
          {board.cells.map((row,index)=>
           <React.Fragment key={index}>

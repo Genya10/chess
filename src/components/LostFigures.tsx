@@ -1,0 +1,21 @@
+import React,{FC} from "react";
+import { Figure } from "../models/figures/Figure";
+
+interface LostFiguresProps {
+    title:string;
+    figures:Figure[]
+}
+
+export const LostFigures:FC<LostFiguresProps> = ({title,figures})=>{
+    return(
+        <div className="lost-figures">
+          <h3>{title}</h3>
+          {figures.map(figure =>
+          <div key={figure.id}>
+            {figure.name}
+            {figure.logo && <img width={25} height={25} src={figure.logo}/>}
+          </div>)
+          }
+        </div>
+    )
+}
