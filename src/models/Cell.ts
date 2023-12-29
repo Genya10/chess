@@ -75,6 +75,16 @@ isEmptyDiagonal(target:Cell):boolean{
    return true;
 }
 
+isPawnAttack(target:Cell):boolean{
+  const direction = this.figure?.color === Colors.BLACK ? 1:-1;
+  if(
+    target.y === this.y + direction &&
+    (target.x === this.x + 1 || target.x - 1)){
+      return true;
+    }
+   return false;
+}
+
 setFigure(figure:Figure){
   this.figure = figure;
   this.figure.cell = this;

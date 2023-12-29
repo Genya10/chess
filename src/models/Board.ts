@@ -1,4 +1,4 @@
-import { Figure } from './figures/Figure';
+import { Figure, FigureNames } from './figures/Figure';
 import { Knight } from './figures/Knight';
 import { Bishop } from './figures/Bishop';
 import { Pawn } from './figures/Pawn';
@@ -43,6 +43,32 @@ export class Board{
                 target.available = !!selectedCell?.figure?.canMove(target)
             }
         }
+    }
+
+    public isCellUnderAttack(target:Cell,color:Colors | undefined):boolean {
+      let targetUnderAttack: boolean = false;
+      this.cells.forEach((element)=>{
+        element.forEach((cell)=>{
+            if(cell.figure?.color !== color){
+                if(
+                    cell.figure?.name === FigureNames.PAWN &&
+                    cell.isPawnAttack(target)
+                ){
+                    targetUnderAttack = true;
+                }
+                if(
+                    cell.figure?.canMove(target) &&
+                    cell.figure?.name !== FigureNames.PAWN
+                ){
+                    targetUnderAttack = true;
+                }
+            }
+        })
+      });
+      if(targetUnderAttack){
+        return false;
+      }
+      return true;
     }
 
     public getCell(x:number,y:number){
